@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+make -C py32-rs patch
+
+for f in py32-rs/svd/*.svd.patched; do
+    mv "$f" "svd/$(basename "${f%.patched}")"
+done
