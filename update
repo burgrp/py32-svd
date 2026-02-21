@@ -7,3 +7,6 @@ make -C py32-rs patch
 for f in py32-rs/svd/*.svd.patched; do
     mv "$f" "svd/$(basename "${f%.patched}")"
 done
+
+# py32f002b adds DBG.IDCODE.CODE register, which overlaps with REV_ID coming from SVD.
+cat patch | patch --strip 1

@@ -11573,12 +11573,6 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>REV_ID</name>
-              <description>REV_ID</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-            <field>
               <name>CODE</name>
               <description>DBG ID code register</description>
               <bitOffset>0</bitOffset>
