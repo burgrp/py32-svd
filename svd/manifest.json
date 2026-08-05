@@ -37,91 +37,91 @@
       "device": "PY32E407xx",
       "pack": "PY32E4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32E407xx.svd",
-      "sha256": "86ea769f497cf97e55860463f0c055816082811b5ba71e1dc0981b8e546f6814"
+      "sha256": "045f70532a187cf26aec8a059b6b10c8afa539143fc4933037528e58df186820"
     },
     {
       "name": "py32f001cxx.svd",
       "device": "PY32F001Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F001Cxx.svd",
-      "sha256": "41a6a4175dd26b840398b735902b9ab10191a469fce50eb2e75ff924702b7ea2"
+      "sha256": "0532ff5433375a1da973217599ff5b365e3b6e578cd2106c9e65d1c1c9d80bc6"
     },
     {
       "name": "py32f001xx.svd",
       "device": "PY32F001xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F001xx.svd",
-      "sha256": "83e9137e14881c9a39f9ce4af2e8a96cd8217d26004fd1c736c0bd1b95ea6b93"
+      "sha256": "33b8d50d9706ee7815c9a860ae33c6249bec8b9ba882d217196681a0cd5aeb51"
     },
     {
       "name": "py32f002axx.svd",
       "device": "PY32F002Axx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Axx.svd",
-      "sha256": "d5756c4f1f90e4f44fe7b639869816c404a3feeb744f5048f3aa05991cfdd883"
+      "sha256": "3f8b9cf7f7f1a2c427a5bb1bc24a98f9322de1f63a3ebb850824038ac016c4f2"
     },
     {
       "name": "py32f002bxx.svd",
       "device": "PY32F002Bxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Bxx.svd",
-      "sha256": "0b986f25600eb29b9b3ccd68daa589a058caf10db741880dec531131491255a2"
+      "sha256": "793169e4bd4e08f57f7a76e646e08c7120e90bc1d4611c6ddbb08d2062472f4b"
     },
     {
       "name": "py32f002cxx.svd",
       "device": "PY32F002Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Cxx.svd",
-      "sha256": "ac1f00998c9c6c76cac95fd502c0badbf1ac97458d3deca7e501d1914b8b16ea"
+      "sha256": "4ee06f5cb73ae7b43fa35e811a8051a6911492fcf230f46daba66fb80f40d960"
     },
     {
       "name": "py32f002xxx.svd",
       "device": "PY32F002Xxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Xxx.svd",
-      "sha256": "17d5ab9325c200601637a331fb4490c5df30b36cf47bc07cbc65d69ed9183c42"
+      "sha256": "111fba5be7bbf8281f9c6b063fccd5fd3a762fc01b6a282df17306cf3b7c8fda"
     },
     {
       "name": "py32f002zxx.svd",
       "device": "PY32F002Zxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Zxx.svd",
-      "sha256": "81a21ea63665e77c2c045f2a8b88ac7027a1eb7db43c32d0733279bd5e6fa538"
+      "sha256": "82ebe201d4bfd4cffe9f0fc2fed82df0cea91ebe5bab714cbeaa419cd9058e36"
     },
     {
       "name": "py32f003xx.svd",
       "device": "PY32F003xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F003xx.svd",
-      "sha256": "614ccc35e6ca2b7f1ffe1fb4908394dca275437551d9611016c38c503fbcefd1"
+      "sha256": "ed39910afbd7c9f68d658b0d1baa4ee5b23e25629205bbf358f8fe1bebd13769"
     },
     {
       "name": "py32f021xx.svd",
       "device": "PY32F021xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F021xx.svd",
-      "sha256": "c160e4494845047fbb38e05dca38ecf7f88968552fac1fc5620c28f5b4b8c3fe"
+      "sha256": "f4f63b77b247f2806a75de2e4884479671f9cda4e53f524b288b2fa98236f655"
     },
     {
       "name": "py32f030xx.svd",
       "device": "PY32F030xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F030xx.svd",
-      "sha256": "8114e1968fad9b912e545ef3b2d24d171e563910e3c5a978313c22801b2740be"
+      "sha256": "c7d1e534dd0ecb3895d14afe893dab63db79a8c7abee7d66c8a32e24691ac2fc"
     },
     {
       "name": "py32f031xx.svd",
       "device": "PY32F031xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F031xx.svd",
-      "sha256": "ee7ece7c8b875c5c80b766a3066d86b9dc0d563cb0be8cd434f1583e5a116f2f"
+      "sha256": "f5921bd9b22d33ff3a5eca7197186ea8ab5f4c7e2230df6f72c9f77789ecbc70"
     },
     {
       "name": "py32f032xx.svd",
       "device": "PY32F032xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F032xx.svd",
-      "sha256": "d81d26c76d96a23a0c44534c3e9ed225e5fda419a57d826d5bbe303b30e78fb5"
+      "sha256": "609adff2e02c48074a2392c63fd66289f4350ad9fc38293b1a994f32ac089238"
     },
     {
       "name": "py32f040cxx.svd",
@@ -198,56 +198,56 @@
       "device": "PY32F403xx",
       "pack": "PY32F4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F403xx.svd",
-      "sha256": "d9156a4dd1f36f5f929ec9855c779f7219d62a3ad6e0ac24e6787a02f7c49f84"
+      "sha256": "320490031064313980439a55d3413aecc2aa418a0e8a6a13c67e7aa8285f34b3"
     },
     {
       "name": "py32f410xx.svd",
       "device": "PY32F410xx",
       "pack": "PY32F4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F410xx.svd",
-      "sha256": "3e14497ca4a85d6e966d87f10fb3bd1a3edbce9791f7d51332370bf23fa3eab4"
+      "sha256": "ec4222b22e7437c01e73c095f9129739129ea90bb3f21a6156f2eadcd74cfa59"
     },
     {
       "name": "py32l020xx.svd",
       "device": "PY32L020xx",
       "pack": "PY32L0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32L020xx.svd",
-      "sha256": "58470a95532b710f380c053f40fa757839ec8e3c8dc3c95e887934c2643d47aa"
+      "sha256": "6d1f4b96eb6977248e03f50f748050d44369d915071eae600e38e5ad0bb4153a"
     },
     {
       "name": "py32l090xx.svd",
       "device": "PY32L090xx",
       "pack": "PY32L0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32L090xx.svd",
-      "sha256": "490c63f30c9626793be9dd55d44dc42fa3d77b18b1de0e3895d00dd05ee3f95a"
+      "sha256": "a1b2c12543f1a49f64b47b4251ad5953cb824396a3de6231e70532ddddb93755"
     },
     {
       "name": "py32m010xx.svd",
       "device": "PY32M010xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M010xx.svd",
-      "sha256": "208a5fc79d5383bda3e856cb2866c5c826f425a9e053d3bcc69222f2e751f657"
+      "sha256": "b6763af0a93a0ba6d8343320c9020aea2aeaa41c73063f53c14839eba8d43bf1"
     },
     {
       "name": "py32m020xx.svd",
       "device": "PY32M020xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M020xx.svd",
-      "sha256": "740c5e3db3784bac12a6b9e59c3a96d03663e1538e6086b8fb3612591275d8c8"
+      "sha256": "bfbba7970708eab00d565394773ee0e5181c44ff0174c9b7e85f0d105174808e"
     },
     {
       "name": "py32m030xx.svd",
       "device": "PY32M030xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M030xx.svd",
-      "sha256": "79e587ef152416dfa4594986321e47ce9b4923b4450cf866cd64d2a1fe4e51d7"
+      "sha256": "9a9d56c64e05c1d7c7ce6f105f98f6cd2a57e0582b28b40045360bdb808b5689"
     },
     {
       "name": "py32m031xx.svd",
       "device": "PY32M031xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M031xx.svd",
-      "sha256": "85dd65fa59fa56249c98edd77bee22adbada1d06ddeda04e9b6681a1c035ee0d"
+      "sha256": "3226c5d1c75d394b3b4e88516f7c126b9d1b9437be7235699c838cfc29883dd3"
     },
     {
       "name": "py32m070cxx.svd",
@@ -268,56 +268,56 @@
       "device": "PY32MD310xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD310xx.svd",
-      "sha256": "7fa0d7fe9e3fa5c530f9bea5277d0e556868b908c3683cd66b3d1df8d47367af"
+      "sha256": "dcc13a812d254a3518fb460503402787162fa1007a17ed2a34746de2c2033b5d"
     },
     {
       "name": "py32md320xx.svd",
       "device": "PY32MD320xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD320xx.svd",
-      "sha256": "3da4db8f0e70f095c06f9d6e12fbed8aa1e0ea0a211deb0f92b0caeb2eeff97d"
+      "sha256": "07355bf64f671dfd198120aebf5c3eeb28bb29e1db064cd88e1225f6b4ba242d"
     },
     {
       "name": "py32md410xx.svd",
       "device": "PY32MD410xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD410xx.svd",
-      "sha256": "5702e6c1137cd669f8d3023177a19635e7e6cd44c8341030643a55aa8330afcd"
+      "sha256": "cd9eb91168ac4f31d78c9a0a350d5c0e354f1eeeec649b1dcd44656799e1cf5e"
     },
     {
       "name": "py32md420xx.svd",
       "device": "PY32MD420xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD420xx.svd",
-      "sha256": "0848a8805aab8c6c601ea2869dfb6a146d0f29a72f81b69ab3e4787134778151"
+      "sha256": "9a0657ae8bc6f2550ce0da9d65a9082d19fd36d495a7bf1e126cc670af81ed4c"
     },
     {
       "name": "py32md430xx.svd",
       "device": "PY32MD430xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD430xx.svd",
-      "sha256": "5eccee5f8e6cd890ae9de089ba90b1ce38c2d96d76c1db4361fa7abc780ef614"
+      "sha256": "ddeed49d2babe4957042f632069cb3f8b50f4a38dcda3511898af9c6f230b5e8"
     },
     {
       "name": "py32t020xx.svd",
       "device": "PY32T020xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T020xx.svd",
-      "sha256": "a58986615044d0de33fda1d682622e0ac6c024e0f5e2ff6c989015be8f04e6d7"
+      "sha256": "bfe1e48561b9c6cb45069e8c96ab31fa2cdcd1c8aab0f631be7cad7f663cf455"
     },
     {
       "name": "py32t090xx.svd",
       "device": "PY32T090xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T090xx.svd",
-      "sha256": "775e41e76b9e4a3b88acc82a2873f20ba1c2a8f4a7281d23f6c422fcf77ba21a"
+      "sha256": "23b3928c77bcc8d8def40befc7c7a317a5ef874c104c869f953ea5904a947b34"
     },
     {
       "name": "py32t092xx.svd",
       "device": "PY32T092xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T092xx.svd",
-      "sha256": "9569e032bc4285a175de0b9842b5c7ab3a1543512af87f05c475078c26b6d6a4"
+      "sha256": "5937dbbc22035308eb963281a661289ffc959b238cfa315daa4266776cee9216"
     }
   ]
 }

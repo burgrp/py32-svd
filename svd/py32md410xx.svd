@@ -4047,10 +4047,12 @@
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOB</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x50000400</baseAddress>
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOF</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x50001400</baseAddress>
     </peripheral>
     <peripheral>

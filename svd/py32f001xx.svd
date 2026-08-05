@@ -2719,6 +2719,7 @@
     </peripheral>
     <peripheral derivedFrom="GPIOB">
       <name>GPIOC</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x50000800</baseAddress>
     </peripheral>
     <peripheral>

@@ -10407,6 +10407,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOA</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -11385,6 +11386,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOB</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48000400</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -12363,6 +12365,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOC</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48000800</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -13341,6 +13344,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOD</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48000C00</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -14319,6 +14323,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOE</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48001000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -15297,6 +15302,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOF</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x48001400</baseAddress>
       <addressBlock>
         <offset>0x0</offset>

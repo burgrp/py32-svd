@@ -24,6 +24,15 @@ pack is published using a lowercase vendor filename. If two packs contain the
 same output filename, they must contain identical bytes. A deterministic
 `manifest.json` records the origin and hashes of all generated files.
 
+Before validation and publication, the updater applies small, deterministic
+corrections for known vendor metadata inconsistencies. Puya's packs do not use
+`groupName` consistently for GPIO ports: identical register blocks may become
+`GPIOA_Type`, `GPIOB_Type`, and so on in SVD consumers. The updater assigns the
+common `GPIO` group to every GPIO port after verifying that all explicit port
+layouts are compatible. A port may omit registers present in the richest port,
+but conflicting offsets or register shapes abort the update. The manifest
+hashes describe these patched, published bytes rather than the raw ZIP entries.
+
 After committing an update here, update TinyGo's `lib/py32-svd` submodule and
 run:
 
@@ -72,5 +81,5 @@ go test -race ./...
 
 They cover recursive extraction, mixed-case extensions, checksums, malformed
 archives and XML, unsafe ZIP entries, output collisions, resource limits,
-deterministic manifests, HTTP failures, and preservation of the old output on
-failure.
+deterministic manifests, GPIO patch safety and idempotence, HTTP failures, and
+preservation of the old output on failure.

@@ -4244,6 +4244,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOA</name>
+      <groupName>GPIO</groupName>
       <description>General-purpose I/Os</description>
       <baseAddress>0x50000000</baseAddress>
       <addressBlock>
@@ -5281,6 +5282,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOB</name>
+      <groupName>GPIO</groupName>
       <description>General-purpose I/Os</description>
       <baseAddress>0x50000400</baseAddress>
       <addressBlock>
@@ -6308,6 +6310,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOC</name>
+      <groupName>GPIO</groupName>
       <description>General-purpose I/Os</description>
       <baseAddress>0x50000800</baseAddress>
       <addressBlock>
@@ -7335,6 +7338,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOD</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x50000C00</baseAddress>
       <addressBlock>
         <offset>0x0</offset>

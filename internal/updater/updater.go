@@ -295,6 +295,10 @@ func extract(packName string, archive []byte, maxEntrySize, maxExpandedSize uint
 		if err != nil {
 			return nil, err
 		}
+		data, err = patchSVD(data)
+		if err != nil {
+			return nil, fmt.Errorf("patch SVD %q: %w", entry.Name, err)
+		}
 		device, err := validateSVD(data)
 		if err != nil {
 			return nil, fmt.Errorf("invalid SVD %q: %w", entry.Name, err)

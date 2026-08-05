@@ -4567,6 +4567,7 @@
     </peripheral>
     <peripheral>
       <name>GPIOA</name>
+      <groupName>GPIO</groupName>
       <description>desc GPIO</description>
       <baseAddress>0x48000000</baseAddress>
       <addressBlock>
@@ -5557,21 +5558,25 @@
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOB</name>
+      <groupName>GPIO</groupName>
       <description>desc GPIO</description>
       <baseAddress>0x48000400</baseAddress>
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOC</name>
+      <groupName>GPIO</groupName>
       <description>desc GPIO</description>
       <baseAddress>0x48000800</baseAddress>
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOD</name>
+      <groupName>GPIO</groupName>
       <description>desc GPIO</description>
       <baseAddress>0x48000C00</baseAddress>
     </peripheral>
     <peripheral derivedFrom="GPIOA">
       <name>GPIOE</name>
+      <groupName>GPIO</groupName>
       <description>desc GPIO</description>
       <baseAddress>0x48001000</baseAddress>
     </peripheral>

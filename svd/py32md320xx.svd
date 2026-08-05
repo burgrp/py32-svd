@@ -4043,6 +4043,7 @@
     </peripheral>
     <peripheral derivedFrom="GPIOB">
       <name>GPIOF</name>
+      <groupName>GPIO</groupName>
       <baseAddress>0x50001400</baseAddress>
     </peripheral>
     <peripheral>
