@@ -1,0 +1,34 @@
+{
+  "packs": [
+    {
+      "name": "PY32E4xx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32E4xx_DFP.1.0.0.pack",
+      "sha256": "adf6c29dee1feead75be91528bfbcb39b0f1a6e89bdea1d7305c3302263d4e05"
+    },
+    {
+      "name": "PY32F0xx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32F0xx_DFP.1.2.8.pack",
+      "sha256": "bb434a82e1a07973b3dcd9045a21748fa390b14c36fc90b9d27b4d005b65b566"
+    },
+    {
+      "name": "PY32F4xx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32F4xx_DFP.1.0.3.pack",
+      "sha256": "58096fc23c8a34e79cb78846c4873ad8ff7476b9d22fac73f84829eeb4c17b75"
+    },
+    {
+      "name": "PY32L0xx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32L0xx_DFP.1.0.3.pack",
+      "sha256": "5d056a8ca5a05d0f90dccd0487c00ebff39bd426ed917308556e1b29a4763279"
+    },
+    {
+      "name": "PY32Mxxx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32Mxxx_DFP.1.0.6.pack",
+      "sha256": "3e18f9907b50126617fc3368392310aeafc6f595440674c36d120f8085d41435"
+    },
+    {
+      "name": "PY32T0xx_DFP",
+      "url": "https://www.puyasemi.com/uploadfiles/Puya.PY32T0xx_DFP.1.0.7.pack",
+      "sha256": "01ce7c8580dec32d1fa47ddfb34722cd91a18bb28ac75e4633af584ed03a6c1f"
+    }
+  ]
+}

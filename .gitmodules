@@ -1,3 +1,0 @@
-[submodule "py32-rs"]
-	path = py32-rs
-	url = https://github.com/py32-rust/py32-rs.git
