@@ -68,16 +68,23 @@ type ManifestPack struct {
 }
 
 type ManifestFile struct {
-	Name        string `json:"name"`
-	Device      string `json:"device"`
-	Pack        string `json:"pack"`
-	ArchivePath string `json:"archive_path"`
-	SHA256      string `json:"sha256"`
+	Name                   string   `json:"name"`
+	Device                 string   `json:"device"`
+	Pack                   string   `json:"pack"`
+	ArchivePath            string   `json:"archive_path"`
+	Headers                []string `json:"headers,omitempty"`
+	HeaderEnumeratedValues int      `json:"header_enumerated_values,omitempty"`
+	SHA256                 string   `json:"sha256"`
 }
 
 type generatedFile struct {
 	manifest ManifestFile
 	data     []byte
+}
+
+type archiveSource struct {
+	path string
+	data []byte
 }
 
 // Run performs an all-or-nothing update of Options.OutputDir.
@@ -264,7 +271,8 @@ func extract(packName string, archive []byte, maxEntrySize, maxExpandedSize uint
 
 	seenPaths := make(map[string]bool)
 	var expanded uint64
-	var files []generatedFile
+	var svds []archiveSource
+	var headers []headerSource
 	for _, entry := range zr.File {
 		clean, err := safeArchivePath(entry.Name)
 		if err != nil {
@@ -287,7 +295,9 @@ func extract(packName string, archive []byte, maxEntrySize, maxExpandedSize uint
 			return nil, fmt.Errorf("archive expands beyond %d bytes", maxExpandedSize)
 		}
 		expanded += entry.UncompressedSize64
-		if !strings.EqualFold(path.Ext(clean), ".svd") {
+		isSVD := strings.EqualFold(path.Ext(clean), ".svd")
+		isHeader := isCMSISDeviceHeader(clean)
+		if !isSVD && !isHeader {
 			continue
 		}
 
@@ -295,34 +305,100 @@ func extract(packName string, archive []byte, maxEntrySize, maxExpandedSize uint
 		if err != nil {
 			return nil, err
 		}
-		data, err = patchSVD(data)
+		if isSVD {
+			svds = append(svds, archiveSource{path: clean, data: data})
+		} else {
+			headers = append(headers, headerSource{Path: clean, Data: data})
+		}
+	}
+	if len(svds) == 0 {
+		return nil, errors.New("archive contains no SVD files")
+	}
+	sort.Slice(svds, func(i, j int) bool {
+		return svds[i].path < svds[j].path
+	})
+	sort.Slice(headers, func(i, j int) bool {
+		return headers[i].Path < headers[j].Path
+	})
+	headersBySVD := associateDeviceHeaders(svds, headers)
+
+	files := make([]generatedFile, 0, len(svds))
+	for _, source := range svds {
+		data, err := patchSVD(source.data)
 		if err != nil {
-			return nil, fmt.Errorf("patch SVD %q: %w", entry.Name, err)
+			return nil, fmt.Errorf("patch SVD %q: %w", source.path, err)
+		}
+		associatedHeaders := headersBySVD[source.path]
+		data, valueCount, err := enrichSVDFromHeaders(data, associatedHeaders)
+		if err != nil {
+			return nil, fmt.Errorf("enrich SVD %q: %w", source.path, err)
 		}
 		device, err := validateSVD(data)
 		if err != nil {
-			return nil, fmt.Errorf("invalid SVD %q: %w", entry.Name, err)
+			return nil, fmt.Errorf("invalid SVD %q: %w", source.path, err)
 		}
 		digest := sha256.Sum256(data)
-		name := strings.ToLower(path.Base(clean))
+		name := strings.ToLower(path.Base(source.path))
+		headerPaths := make([]string, len(associatedHeaders))
+		for i := range associatedHeaders {
+			headerPaths[i] = associatedHeaders[i].Path
+		}
 		files = append(files, generatedFile{
 			manifest: ManifestFile{
-				Name:        name,
-				Device:      device,
-				Pack:        packName,
-				ArchivePath: clean,
-				SHA256:      hex.EncodeToString(digest[:]),
+				Name:                   name,
+				Device:                 device,
+				Pack:                   packName,
+				ArchivePath:            source.path,
+				Headers:                headerPaths,
+				HeaderEnumeratedValues: valueCount,
+				SHA256:                 hex.EncodeToString(digest[:]),
 			},
 			data: data,
 		})
 	}
-	if len(files) == 0 {
-		return nil, errors.New("archive contains no SVD files")
-	}
-	sort.Slice(files, func(i, j int) bool {
-		return files[i].manifest.ArchivePath < files[j].manifest.ArchivePath
-	})
 	return files, nil
+}
+
+func isCMSISDeviceHeader(name string) bool {
+	lower := strings.ToLower(name)
+	withRoot := "/" + lower
+	base := path.Base(lower)
+	return strings.Contains(withRoot, "/cmsis/device/") &&
+		strings.Contains(withRoot, "/include/") &&
+		strings.HasPrefix(base, "py32") && strings.EqualFold(path.Ext(base), ".h")
+}
+
+// associateDeviceHeaders assigns each concrete device header to the SVD with
+// the longest matching basename prefix. This distinguishes, for example,
+// PY32F040xx, PY32F040Cxx, PY32F040Exx, and PY32F040EPxx without relying on a
+// particular package directory layout.
+func associateDeviceHeaders(svds []archiveSource, headers []headerSource) map[string][]headerSource {
+	prefixes := make([]string, len(svds))
+	for i := range svds {
+		stem := strings.TrimSuffix(path.Base(svds[i].path), path.Ext(svds[i].path))
+		stem = strings.ToLower(strings.TrimSpace(stem))
+		if strings.HasSuffix(stem, "xx") {
+			stem = stem[:len(stem)-2]
+		}
+		prefixes[i] = stem
+	}
+
+	result := make(map[string][]headerSource)
+	for _, header := range headers {
+		stem := strings.TrimSuffix(path.Base(header.Path), path.Ext(header.Path))
+		stem = strings.ToLower(strings.TrimSpace(stem))
+		best := -1
+		for i, prefix := range prefixes {
+			if prefix != "" && strings.HasPrefix(stem, prefix) && (best < 0 || len(prefix) > len(prefixes[best])) {
+				best = i
+			}
+		}
+		if best >= 0 {
+			path := svds[best].path
+			result[path] = append(result[path], header)
+		}
+	}
+	return result
 }
 
 func safeArchivePath(name string) (string, error) {

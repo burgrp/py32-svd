@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/hex"
+	"reflect"
 	"strings"
 	"testing"
 )
@@ -97,11 +98,18 @@ func TestNormalizeGPIOGroupNamesLeavesUnrelatedSVDUnchanged(t *testing.T) {
 
 func TestExtractPublishesAndHashesPatchedSVD(t *testing.T) {
 	input := `<device><name>PY32TEST</name><peripherals>` +
-		`<peripheral><name>GPIOA</name><registers><register><name>MODER</name><addressOffset>0</addressOffset></register></registers></peripheral>` +
+		`<peripheral><name>GPIOA</name><registers><register><name>MODER</name><addressOffset>0</addressOffset><fields><field><name>MODE0</name><bitRange>[1:0]</bitRange></field></fields></register></registers></peripheral>` +
 		`<peripheral derivedFrom="GPIOA"><name>GPIOB</name></peripheral>` +
 		`</peripherals></device>`
+	headerPath := "Drivers/CMSIS/Device/PY32TEST/Include/py32testx1.h"
+	header := "#define GPIO_MODER_MODE0_Pos 0U\n" +
+		"#define GPIO_MODER_MODE0_Msk (3U << GPIO_MODER_MODE0_Pos)\n" +
+		"#define GPIO_MODER_MODE0_OUTPUT (1U << GPIO_MODER_MODE0_Pos)"
 
-	files, err := extract("test", makePack(t, zipEntry{name: "test.svd", data: input}), 4096, 4096)
+	files, err := extract("test", makePack(t,
+		zipEntry{name: "py32testxx.svd", data: input},
+		zipEntry{name: headerPath, data: header},
+	), 4096, 8192)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -113,6 +121,15 @@ func TestExtractPublishesAndHashesPatchedSVD(t *testing.T) {
 	}
 	if count := bytes.Count(files[0].data, []byte("<groupName>GPIO</groupName>")); count != 2 {
 		t.Fatalf("got %d normalized GPIO group names, want 2", count)
+	}
+	if !bytes.Contains(files[0].data, []byte("<name>OUTPUT</name>")) {
+		t.Fatal("extract did not publish the header-enriched SVD")
+	}
+	if got, want := files[0].manifest.Headers, []string{headerPath}; !reflect.DeepEqual(got, want) {
+		t.Fatalf("manifest headers = %v, want %v", got, want)
+	}
+	if got := files[0].manifest.HeaderEnumeratedValues; got != 1 {
+		t.Fatalf("manifest header enumeration count = %d, want 1", got)
 	}
 	sum := sha256.Sum256(files[0].data)
 	if got, want := files[0].manifest.SHA256, hex.EncodeToString(sum[:]); got != want {

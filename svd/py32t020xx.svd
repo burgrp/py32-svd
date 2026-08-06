@@ -148,6 +148,16 @@
               <description>conversion ressel select</description>
               <bitRange>[4:3]</bitRange>
               <access>read-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ALIGN</name>
@@ -158,11 +168,35 @@
               <name>EXTSEL</name>
               <description>tigle select</description>
               <bitRange>[8:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTEN</name>
               <description>trigle mode select</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OVRMOD</name>
@@ -198,6 +232,24 @@
               <name>AWDCH</name>
               <description>awd channels</description>
               <bitRange>[29:26]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -221,11 +273,111 @@
               <name>LT</name>
               <description>watch dog values of low</description>
               <bitRange>[11:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HT</name>
               <description>watch dog values of high</description>
               <bitRange>[27:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -310,6 +462,72 @@
               <description>conversion data</description>
               <bitRange>[15:0]</bitRange>
               <access>read-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>13</name>
+                  <value>8192</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>14</name>
+                  <value>16384</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>15</name>
+                  <value>32768</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -327,6 +545,16 @@
               <name>CALSMP</name>
               <description>calibration sample time</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CALSET</name>
@@ -589,11 +817,31 @@
               <name>INMSEL</name>
               <description>COMP1 negative input select</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>INPSEL</name>
               <description>COMP1 positive input select</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WINMODE</name>
@@ -614,6 +862,32 @@
               <name>COMP_VCDIV</name>
               <description>COMP1, COMP2 partial voltage selection</description>
               <bitRange>[25:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>COMP_VCDIV_EN</name>
@@ -687,11 +961,31 @@
               <name>INMSEL</name>
               <description>COMP2 negative input select</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>INPSEL</name>
               <description>COMP2 positive input select</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>POLARITY</name>
@@ -1286,21 +1580,61 @@
               <name>EXTI0</name>
               <description>GPIO exti line select</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTI1</name>
               <description>GPIO exti line select</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTI2</name>
               <description>GPIO exti line select</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTI3</name>
               <description>GPIO exti line select</description>
               <bitRange>[25:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -1312,11 +1646,31 @@
               <name>EXTI4</name>
               <description>GPIO exti line select</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTI5</name>
               <description>GPIO exti line select</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -1568,6 +1922,16 @@
               <name>LATENCY</name>
               <description>Latency</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -1707,6 +2071,20 @@
               <name>BOR_LEV</name>
               <description>BOR Level</description>
               <bitRange>[11:9]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>IWDG_SW</name>
@@ -1733,11 +2111,47 @@
               <name>SDK_STRT</name>
               <description>SDK Area Start Address</description>
               <bitRange>[3:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SDK_END</name>
               <description>SDK Area End Address</description>
               <bitRange>[11:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -1749,11 +2163,35 @@
               <name>BOOT_SIZE</name>
               <description>Load Flash Size</description>
               <bitRange>[2:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SWD_MODE</name>
               <description>SWD Mode</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BOOT0</name>
@@ -1775,6 +2213,40 @@
               <name>WRP</name>
               <description>Write Protection Disable</description>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -1915,81 +2387,241 @@
               <name>MODE0</name>
               <description>Port x configuration I/O pin 0</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE1</name>
               <description>Port x configuration I/O pin 1</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE2</name>
               <description>Port x configuration I/O pin 2</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE3</name>
               <description>Port x configuration I/O pin 3</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE4</name>
               <description>Port x configuration I/O pin 4</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE5</name>
               <description>Port x configuration I/O pin 5</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE6</name>
               <description>Port x configuration I/O pin 6</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE7</name>
               <description>Port x configuration I/O pin 7</description>
               <bitRange>[15:14]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE8</name>
               <description>Port x configuration I/O pin 8</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE9</name>
               <description>Port x configuration I/O pin 9</description>
               <bitRange>[19:18]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE10</name>
               <description>Port x configuration I/O pin 10</description>
               <bitRange>[21:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE11</name>
               <description>Port x configuration I/O pin 11</description>
               <bitRange>[23:22]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE12</name>
               <description>Port x configuration I/O pin 12</description>
               <bitRange>[25:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE13</name>
               <description>Port x configuration I/O pin 13</description>
               <bitRange>[27:26]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE14</name>
               <description>Port x configuration I/O pin 14</description>
               <bitRange>[29:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE15</name>
               <description>Port x configuration I/O pin 15</description>
               <bitRange>[31:30]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2089,81 +2721,241 @@
               <name>OSPEED0</name>
               <description>Port x configuration I/O pin 0</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED1</name>
               <description>Port x configuration I/O pin 1</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED2</name>
               <description>Port x configuration I/O pin 2</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED3</name>
               <description>Port x configuration I/O pin 3</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED4</name>
               <description>Port x configuration I/O pin 4</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED5</name>
               <description>Port x configuration I/O pin 5</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED6</name>
               <description>Port x configuration I/O pin 6</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED7</name>
               <description>Port x configuration I/O pin 7</description>
               <bitRange>[15:14]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED8</name>
               <description>Port x configuration I/O pin 8</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED9</name>
               <description>Port x configuration I/O pin 9</description>
               <bitRange>[19:18]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED10</name>
               <description>Port x configuration I/O pin 10</description>
               <bitRange>[21:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED11</name>
               <description>Port x configuration I/O pin 11</description>
               <bitRange>[23:22]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED12</name>
               <description>Port x configuration I/O pin 12</description>
               <bitRange>[25:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED13</name>
               <description>Port x configuration I/O pin 13</description>
               <bitRange>[27:26]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED14</name>
               <description>Port x configuration I/O pin 14</description>
               <bitRange>[29:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED15</name>
               <description>Port x configuration I/O pin 15</description>
               <bitRange>[31:30]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2176,81 +2968,241 @@
               <name>PUPD0</name>
               <description>Port x configuration I/O pin 0</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD1</name>
               <description>Port x configuration I/O pin 1</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD2</name>
               <description>Port x configuration I/O pin 2</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD3</name>
               <description>Port x configuration I/O pin 3</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD4</name>
               <description>Port x configuration I/O pin 4</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD5</name>
               <description>Port x configuration I/O pin 5</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD6</name>
               <description>Port x configuration I/O pin 6</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD7</name>
               <description>Port x configuration I/O pin 7</description>
               <bitRange>[15:14]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD8</name>
               <description>Port x configuration I/O pin 8</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD9</name>
               <description>Port x configuration I/O pin 9</description>
               <bitRange>[19:18]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD10</name>
               <description>Port x configuration I/O pin 10</description>
               <bitRange>[21:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD11</name>
               <description>Port x configuration I/O pin 11</description>
               <bitRange>[23:22]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD12</name>
               <description>Port x configuration I/O pin 12</description>
               <bitRange>[25:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD13</name>
               <description>Port x configuration I/O pin 13</description>
               <bitRange>[27:26]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD14</name>
               <description>Port x configuration I/O pin 14</description>
               <bitRange>[29:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD15</name>
               <description>Port x configuration I/O pin 15</description>
               <bitRange>[31:30]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2744,41 +3696,153 @@
               <name>AFSEL0</name>
               <description>Alternate function selection for port x I/O pin 0</description>
               <bitRange>[2:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL1</name>
               <description>Alternate function selection for port x I/O pin 1</description>
               <bitRange>[6:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL2</name>
               <description>Alternate function selection for port x I/O pin 2</description>
               <bitRange>[10:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL3</name>
               <description>Alternate function selection for port x I/O pin 4</description>
               <bitRange>[14:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL4</name>
               <description>Alternate function selection for port x I/O pin 4</description>
               <bitRange>[18:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL5</name>
               <description>Alternate function selection for port x I/O pin 5</description>
               <bitRange>[22:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL6</name>
               <description>Alternate function selection for port x I/O pin 6</description>
               <bitRange>[26:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL7</name>
               <description>Alternate function selection for port x I/O pin 7</description>
               <bitRange>[30:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2791,41 +3855,153 @@
               <name>AFSEL8</name>
               <description>Alternate function selection for port x I/O pin 8</description>
               <bitRange>[2:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL9</name>
               <description>Alternate function selection for port x I/O pin 9</description>
               <bitRange>[6:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL10</name>
               <description>Alternate function selection for port x I/O pin 10</description>
               <bitRange>[10:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL11</name>
               <description>Alternate function selection for port x I/O pin 11</description>
               <bitRange>[14:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL12</name>
               <description>Alternate function selection for port x I/O pin 12</description>
               <bitRange>[18:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL13</name>
               <description>Alternate function selection for port x I/O pin 13</description>
               <bitRange>[22:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL14</name>
               <description>Alternate function selection for port x I/O pin 14</description>
               <bitRange>[26:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AFSEL15</name>
               <description>Alternate function selection for port x I/O pin 15</description>
               <bitRange>[30:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2938,21 +4114,61 @@
               <name>MODE0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -2992,21 +4208,61 @@
               <name>OSPEED0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3019,21 +4275,61 @@
               <name>PUPD0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3248,31 +4544,91 @@
               <name>MODE0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE4</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MODE5</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3322,31 +4678,91 @@
               <name>OSPEED0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED4</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSPEED5</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3359,31 +4775,91 @@
               <name>PUPD0</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD1</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD2</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD3</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD4</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PUPD5</name>
               <description>Port x configuration bits (y = 0..15)</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3729,6 +5205,36 @@
               <name>FREQ</name>
               <description>Peripheral clock frequency</description>
               <bitRange>[6:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ITERREN</name>
@@ -3768,6 +5274,40 @@
               <name>DR</name>
               <description>8-bit data register</description>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3928,11 +5468,31 @@
               <name>DIV</name>
               <description>PCLK division</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CNT</name>
               <description>Timeout count number</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -3970,6 +5530,20 @@
               <name>PR</name>
               <description>Prescaler divider</description>
               <bitRange>[2:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -4183,16 +5757,46 @@
               <name>FLS_SLPTIME</name>
               <description>flash sleep time control</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LPR</name>
               <description>pmu mode control</description>
               <bitRange>[15:14]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SRAM_RETV_CTRL</name>
               <description>sram retev control</description>
               <bitRange>[18:17]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HSION_CTRL</name>
@@ -4238,6 +5842,20 @@
               <name>HSIDIV</name>
               <description>HSI generates the crossover factor when HSISYS clocks</description>
               <bitRange>[13:11]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HSEON</name>
@@ -4271,16 +5889,122 @@
               <name>HSI_TRIM</name>
               <description>Clock frequency calibration value</description>
               <bitRange>[12:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HSI_FS</name>
               <description>HSI frequency selection</description>
               <bitRange>[15:13]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LSI_TRIM</name>
               <description>Internal low-speed clock frequency calibration</description>
               <bitRange>[24:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -4293,31 +6017,144 @@
               <name>SW</name>
               <description>System clock source selection</description>
               <bitRange>[2:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SWS</name>
               <description>System clock source selection</description>
               <bitRange>[5:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>HSISYS</name>
+                  <description>HSISYS used as system clock</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HSE</name>
+                  <description>HSE used as system clock</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>LSI</name>
+                  <description>LSI used as system clock</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>LSE</name>
+                  <description>LSE used as system clock</description>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HPRE</name>
               <description>The AHB clock HCLK is based on the crossover coefficient of SYSCLK</description>
               <bitRange>[11:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PPRE</name>
               <description>APB clock division factor</description>
               <bitRange>[14:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MCOSEL</name>
               <description>MCO output clock selection</description>
               <bitRange>[27:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <description>MCO Prescaler configuration</description>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MCOPRE</name>
               <description>Microprocessor output clock (MCO) divider factor</description>
               <bitRange>[30:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -4335,16 +6172,46 @@
               <name>HSE_STARTUP</name>
               <description>HSE stabilization time selection</description>
               <bitRange>[4:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LSE_DRIVER</name>
               <description>LSE drive capability setting</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LSE_STARTUP</name>
               <description>LSE crystal oscillator stabilization time selection</description>
               <bitRange>[21:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -4736,6 +6603,24 @@
               <name>ADC_CKMODE</name>
               <description>ADC clock mode</description>
               <bitRange>[23:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -4773,11 +6658,31 @@
               <name>RTCSEL</name>
               <description>RTC clock source selection</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RTC_HSEDIV_SEL</name>
               <description>The RTC clock source is selected as the division of the HSE clock</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RTCEN</name>
@@ -5119,6 +7024,20 @@
               <name>BR</name>
               <description>Baud Rate Control</description>
               <bitRange>[5:3]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SPE</name>
@@ -5231,12 +7150,32 @@
               <description>FIFO Reception Level</description>
               <bitRange>[10:9]</bitRange>
               <access>read-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>FTLVL</name>
               <description>FIFO Transmission Level</description>
               <bitRange>[12:11]</bitRange>
               <access>read-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5272,16 +7211,46 @@
               <name>MEM_MODE</name>
               <description>Storage Area Mapping Selection</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TIM1_IC1_SRC</name>
               <description>Timer1 CH1 Input Selection</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ETR_SRC_TIM1</name>
               <description>Timer1 ETR Input Selection</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5358,36 +7327,138 @@
               <name>PA_EIIC</name>
               <description>Pa I2C IO enable</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF_EIIC</name>
               <description>Pf I2C IO enable</description>
               <bitRange>[4:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF_PU_IIC</name>
               <description>Pf I2C Pull-up resistor control enable</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA_EHS</name>
               <description>Pa LED IO Conrtol</description>
               <bitRange>[12:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA_IODRVP</name>
               <description>Pa I2C_VCC Output Drive config</description>
               <bitRange>[14:13]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA_ENSEG</name>
               <description>Pa Seg Mode enable</description>
               <bitRange>[21:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PB_ENSEG</name>
               <description>Pb Seg Mode enable</description>
               <bitRange>[23:22]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5432,81 +7503,241 @@
               <name>PA0_IORP</name>
               <description>Pa0 IO pull-up pull-down resistance config</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA1_IORP</name>
               <description>Pa1 IO pull-up pull-down resistance config</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA2_IORP</name>
               <description>Pa2 IO pull-up pull-down resistance config</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA3_IORP</name>
               <description>Pa3 IO pull-up pull-down resistance config</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA4_IORP</name>
               <description>Pa4 IO pull-up pull-down resistance config</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA5_IORP</name>
               <description>Pa5 IO pull-up pull-down resistance config</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA6_IORP</name>
               <description>Pa6 IO pull-up pull-down resistance config</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA7_IORP</name>
               <description>Pa7 IO pull-up pull-down resistance config</description>
               <bitRange>[15:14]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA8_IORP</name>
               <description>Pa8 IO pull-up pull-down resistance config</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA9_IORP</name>
               <description>Pa9 IO pull-up pull-down resistance config</description>
               <bitRange>[19:18]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA10_IORP</name>
               <description>Pa10 IO pull-up pull-down resistance config</description>
               <bitRange>[21:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA11_IORP</name>
               <description>Pa11 IO pull-up pull-down resistance config</description>
               <bitRange>[23:22]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA12_IORP</name>
               <description>Pa12 IO pull-up pull-down resistance config</description>
               <bitRange>[25:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA13_IORP</name>
               <description>Pa13 IO pull-up pull-down resistance config</description>
               <bitRange>[27:26]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA14_IORP</name>
               <description>Pa14 IO pull-up pull-down resistance config</description>
               <bitRange>[29:28]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA15_IORP</name>
               <description>Pa15 IO pull-up pull-down resistance config</description>
               <bitRange>[31:30]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5518,21 +7749,61 @@
               <name>PB0_IORP</name>
               <description>Pb0 IO pull-up pull-down resistance config</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PB1_IORP</name>
               <description>Pb1 IO pull-up pull-down resistance config</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PB2_IORP</name>
               <description>Pb2 IO pull-up pull-down resistance config</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PB3_IORP</name>
               <description>Pb3 IO pull-up pull-down resistance config</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5544,31 +7815,91 @@
               <name>PF0_IORP</name>
               <description>Pf0 IO pull-up pull-down resistance config</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF1_IORP</name>
               <description>Pf1 IO pull-up pull-down resistance config</description>
               <bitRange>[3:2]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF2_IORP</name>
               <description>Pf2 IO pull-up pull-down resistance config</description>
               <bitRange>[5:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF3_IORP</name>
               <description>Pf3 IO pull-up pull-down resistance config</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF4_IORP</name>
               <description>Pf4 IO pull-up pull-down resistance config</description>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PF5_IORP</name>
               <description>Pf5 IO pull-up pull-down resistance config</description>
               <bitRange>[11:10]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5623,6 +7954,16 @@
             <field>
               <name>CMS</name>
               <bitRange>[6:5]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ARPE</name>
@@ -5631,6 +7972,16 @@
             <field>
               <name>CKD</name>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -5650,6 +8001,20 @@
             <field>
               <name>MMS</name>
               <bitRange>[6:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TI1S</name>
@@ -5701,6 +8066,20 @@
             <field>
               <name>TS</name>
               <bitRange>[6:4]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MSM</name>
@@ -5709,10 +8088,38 @@
             <field>
               <name>ETF</name>
               <bitRange>[11:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ETPS</name>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ECE</name>
@@ -6238,10 +8645,54 @@
             <field>
               <name>DTG</name>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LOCK</name>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OSSI</name>
@@ -6315,6 +8766,16 @@
             <field>
               <name>CKD</name>
               <bitRange>[9:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6481,6 +8942,16 @@
             <field>
               <name>TI1_RMP</name>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6510,6 +8981,16 @@
               <name>MODE</name>
               <description>TK mode select</description>
               <bitRange>[2:1]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>EXTCMODEN</name>
@@ -6530,16 +9011,54 @@
               <name>COPADATA</name>
               <description>unsensed key output control</description>
               <bitRange>[7:6]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VCCTKCR</name>
               <description>VCCTK voltage select</description>
               <bitRange>[10:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VCC1CR</name>
               <description>VCC1 voltage select</description>
               <bitRange>[13:11]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MIDACSTEP</name>
@@ -6555,6 +9074,20 @@
               <name>CFT</name>
               <description>CMP OUT filter select</description>
               <bitRange>[18:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VCCTKEN</name>
@@ -6580,11 +9113,39 @@
               <name>DIV</name>
               <description>PCLK division(TK_CLK)</description>
               <bitRange>[26:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>STDIV</name>
               <description>PCLK division(ST_CLK)</description>
               <bitRange>[29:27]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6657,6 +9218,16 @@
               <name>SHORTSW_NUM</name>
               <description>Short switch times of hardware mode in CSD mode</description>
               <bitRange>[13:12]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LPEN</name>
@@ -6667,16 +9238,54 @@
               <name>KVREF</name>
               <description>Reference voltage select</description>
               <bitRange>[17:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>KVREF_CSA_TARGET</name>
               <description>Vref charging target value in CSA mode</description>
               <bitRange>[19:18]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LFSRW</name>
               <description>LFSR valid bit</description>
               <bitRange>[23:20]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6689,16 +9298,118 @@
               <name>MIDAC</name>
               <description>Main IDAC configuration</description>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SIDAC</name>
               <description>Slave IDAC configuration</description>
               <bitRange>[23:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SIDAC_CSA_TARGET</name>
               <description>SIDAC target value in CSA mode</description>
               <bitRange>[31:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6711,6 +9422,112 @@
               <name>KEN</name>
               <description>Sense function enable</description>
               <bitRange>[25:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>13</name>
+                  <value>8192</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>14</name>
+                  <value>16384</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>15</name>
+                  <value>32768</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>16</name>
+                  <value>65536</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>17</name>
+                  <value>131072</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>18</name>
+                  <value>262144</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>19</name>
+                  <value>524288</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>20</name>
+                  <value>1048576</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>21</name>
+                  <value>2097152</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>22</name>
+                  <value>4194304</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>23</name>
+                  <value>8388608</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>24</name>
+                  <value>16777216</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>25</name>
+                  <value>33554432</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6723,6 +9540,112 @@
               <name>CHS</name>
               <description>Sense key select</description>
               <bitRange>[25:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>13</name>
+                  <value>8192</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>14</name>
+                  <value>16384</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>15</name>
+                  <value>32768</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>16</name>
+                  <value>65536</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>17</name>
+                  <value>131072</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>18</name>
+                  <value>262144</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>19</name>
+                  <value>524288</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>20</name>
+                  <value>1048576</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>21</name>
+                  <value>2097152</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>22</name>
+                  <value>4194304</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>23</name>
+                  <value>8388608</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>24</name>
+                  <value>16777216</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>25</name>
+                  <value>33554432</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6735,6 +9658,112 @@
               <name>COPAMODEIO</name>
               <description>IO compensation enable</description>
               <bitRange>[25:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>13</name>
+                  <value>8192</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>14</name>
+                  <value>16384</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>15</name>
+                  <value>32768</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>16</name>
+                  <value>65536</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>17</name>
+                  <value>131072</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>18</name>
+                  <value>262144</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>19</name>
+                  <value>524288</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>20</name>
+                  <value>1048576</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>21</name>
+                  <value>2097152</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>22</name>
+                  <value>4194304</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>23</name>
+                  <value>8388608</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>24</name>
+                  <value>16777216</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>25</name>
+                  <value>33554432</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6747,11 +9776,87 @@
               <name>SETTIME</name>
               <description>Voltage building time in CSA mode or short switch time in CSD mode or discharge time in PCI mode</description>
               <bitRange>[9:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VTINITTIME</name>
               <description>CMOD dischsrge time in CSA mode</description>
               <bitRange>[23:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -6764,21 +9869,113 @@
               <name>VREF_MIDAC_TIME</name>
               <description>VREF or MIDAC stabilization time in CSA mode</description>
               <bitRange>[4:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>DISCH_CHRG_TIME</name>
               <description>CMOD discharging or charging time in CSA mode</description>
               <bitRange>[14:8]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SIDACTIME</name>
               <description>SIDAC stabilization time in CSA mode</description>
               <bitRange>[20:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BEFORE_SW_TIME</name>
               <description>From setting SIDACEN to switching TK_SW time in CSA mode or from clearing CMODDISCH to switching TK_SW time in PCI mode</description>
               <bitRange>[27:24]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CHRG_SIDACEN_TIME</name>
@@ -6808,6 +10005,44 @@
               <name>SWDIV</name>
               <description>TK_CLK division(TK_SW)</description>
               <bitRange>[8:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -7007,6 +10242,44 @@
               <name>DR</name>
               <description>Receive/send data register</description>
               <bitRange>[8:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -7019,6 +10292,72 @@
               <name>BRR</name>
               <description>Baud rate register</description>
               <bitRange>[15:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>8</name>
+                  <value>256</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>9</name>
+                  <value>512</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>10</name>
+                  <value>1024</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>11</name>
+                  <value>2048</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>12</name>
+                  <value>4096</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>13</name>
+                  <value>8192</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>14</name>
+                  <value>16384</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>15</name>
+                  <value>32768</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -7092,6 +10431,16 @@
               <name>M</name>
               <description>Data Length Select</description>
               <bitRange>[1:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>STOP</name>
@@ -7192,6 +10541,40 @@
               <name>RAR</name>
               <description>Receive address matching register</description>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -7203,6 +10586,40 @@
               <name>TAR</name>
               <description>Transmit address matching register</description>
               <bitRange>[7:0]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>0</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>1</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>2</name>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>3</name>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>4</name>
+                  <value>16</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>5</name>
+                  <value>32</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>6</name>
+                  <value>64</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>7</name>
+                  <value>128</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>

@@ -37,7 +37,13 @@
       "device": "PY32E407xx",
       "pack": "PY32E4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32E407xx.svd",
-      "sha256": "045f70532a187cf26aec8a059b6b10c8afa539143fc4933037528e58df186820"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32E4xx/Include/py32e407xC.h",
+        "Drivers/CMSIS/Device/PUYA/PY32E4xx/Include/py32e407xD.h",
+        "Drivers/CMSIS/Device/PUYA/PY32E4xx/Include/py32e407xE.h"
+      ],
+      "header_enumerated_values": 1880,
+      "sha256": "01ffda350601e4af19870a40e2d230091854f851aa1500567ff90df65dc1b9d2"
     },
     {
       "name": "py32f001cxx.svd",
@@ -58,266 +64,473 @@
       "device": "PY32F002Axx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Axx.svd",
-      "sha256": "3f8b9cf7f7f1a2c427a5bb1bc24a98f9322de1f63a3ebb850824038ac016c4f2"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002ax5.h"
+      ],
+      "header_enumerated_values": 593,
+      "sha256": "0b96bcbe65bc33cf7c524277e388dfe078ead22b0dfca6ea7d5ee38603142240"
     },
     {
       "name": "py32f002bxx.svd",
       "device": "PY32F002Bxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Bxx.svd",
-      "sha256": "793169e4bd4e08f57f7a76e646e08c7120e90bc1d4611c6ddbb08d2062472f4b"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002bx5.h"
+      ],
+      "header_enumerated_values": 272,
+      "sha256": "ddc678b296e7ab3dad48b05431e2aa5cad74097197fc0360cde094341bdcc5d4"
     },
     {
       "name": "py32f002cxx.svd",
       "device": "PY32F002Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Cxx.svd",
-      "sha256": "4ee06f5cb73ae7b43fa35e811a8051a6911492fcf230f46daba66fb80f40d960"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002cx6.h"
+      ],
+      "header_enumerated_values": 283,
+      "sha256": "48bf733120b12d6aad2b0d82ca357ff443856779955e7eeee869037dc7478ce5"
     },
     {
       "name": "py32f002xxx.svd",
       "device": "PY32F002Xxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Xxx.svd",
-      "sha256": "111fba5be7bbf8281f9c6b063fccd5fd3a762fc01b6a282df17306cf3b7c8fda"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002xx2.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002xx4.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002xx5.h"
+      ],
+      "header_enumerated_values": 272,
+      "sha256": "177af865d928d1fff1f5e49edc5eeef2967e71a881f442db9ec643654b0ea193"
     },
     {
       "name": "py32f002zxx.svd",
       "device": "PY32F002Zxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F002Zxx.svd",
-      "sha256": "82ebe201d4bfd4cffe9f0fc2fed82df0cea91ebe5bab714cbeaa419cd9058e36"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002zx4.h"
+      ],
+      "header_enumerated_values": 273,
+      "sha256": "9371694f557b9ea43c07eabde0f96d758f961d6463dfc45849181daa0de35caa"
     },
     {
       "name": "py32f003xx.svd",
       "device": "PY32F003xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F003xx.svd",
-      "sha256": "ed39910afbd7c9f68d658b0d1baa4ee5b23e25629205bbf358f8fe1bebd13769"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003x4.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003x7.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003x8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f003xx.h"
+      ],
+      "header_enumerated_values": 700,
+      "sha256": "350c9d52396ea406067ea43b887807d486a6fed92fc40809a1fc4965092ee038"
     },
     {
       "name": "py32f021xx.svd",
       "device": "PY32F021xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F021xx.svd",
-      "sha256": "f4f63b77b247f2806a75de2e4884479671f9cda4e53f524b288b2fa98236f655"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f021x8.h"
+      ],
+      "header_enumerated_values": 742,
+      "sha256": "4f77b910b5dbf213b703bce4032f47804ae3b9ba3687eef465c7819947803d1d"
     },
     {
       "name": "py32f030xx.svd",
       "device": "PY32F030xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F030xx.svd",
-      "sha256": "c7d1e534dd0ecb3895d14afe893dab63db79a8c7abee7d66c8a32e24691ac2fc"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030x4.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030x7.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030x8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f030xx.h"
+      ],
+      "header_enumerated_values": 733,
+      "sha256": "c6cb83766e61b3b1a2e9822de8b6fa510134edf4e753004876daf41fa6c79e73"
     },
     {
       "name": "py32f031xx.svd",
       "device": "PY32F031xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F031xx.svd",
-      "sha256": "f5921bd9b22d33ff3a5eca7197186ea8ab5f4c7e2230df6f72c9f77789ecbc70"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f031x4.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f031x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f031x7.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f031x8.h"
+      ],
+      "header_enumerated_values": 765,
+      "sha256": "078df2f34a10b8ef18b3dc4da0e434779eef036f2076462cc28a7421b3185aec"
     },
     {
       "name": "py32f032xx.svd",
       "device": "PY32F032xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F032xx.svd",
-      "sha256": "609adff2e02c48074a2392c63fd66289f4350ad9fc38293b1a994f32ac089238"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f032x8.h"
+      ],
+      "header_enumerated_values": 674,
+      "sha256": "a69016845ae4b14c87d7f59d0dc0836531107090485f188d37ccbfa1c9bb3420"
     },
     {
       "name": "py32f040cxx.svd",
       "device": "PY32F040Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F040Cxx.svd",
-      "sha256": "ca169a6be5066729ee77ad2992a47898d967dab7db05622dada79dd3ade2acea"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040cx6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040cx8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040cx9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040cxB.h"
+      ],
+      "header_enumerated_values": 878,
+      "sha256": "1c97b297231fd7961a590eb996d10b35f4a604794d23ddd05de85a1769ab48b1"
     },
     {
       "name": "py32f040epxx.svd",
       "device": "PY32F040EPxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F040EPxx.svd",
-      "sha256": "9cf55ccc6e498f2e9f0c3a9eb08bea4a2795c094e85dea32b613dd6690c325ee"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040epxB.h"
+      ],
+      "header_enumerated_values": 862,
+      "sha256": "59ad9d92d376dc8d39b104978e785728b03ebe0dc399efc06bcc141a9d374744"
     },
     {
       "name": "py32f040exx.svd",
       "device": "PY32F040Exx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F040Exx.svd",
-      "sha256": "c74d517b8cee0f5a6ea70573a014a3e0023d0ffd4f26d9f4fce621e7c2e67a45"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040ex6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040ex8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040ex9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040exB.h"
+      ],
+      "header_enumerated_values": 878,
+      "sha256": "a138ad14e11954f48d423389e5a4d6922ff0e1f6ada44069d37445da6d6de01f"
     },
     {
       "name": "py32f040xx.svd",
       "device": "PY32F040xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F040xx.svd",
-      "sha256": "bebea8f89abfb23748dd9e821b4df833c56e72c642d09b3ed336df2b158341f4"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040x8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040x9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f040xB.h"
+      ],
+      "header_enumerated_values": 881,
+      "sha256": "89e5c940e52c75f51d89424fd3583ce6874598ef5f2417f5c807112891e36d05"
     },
     {
       "name": "py32f071cxx.svd",
       "device": "PY32F071Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F071Cxx.svd",
-      "sha256": "842651c08f856c96c7b0300189bbdda9e1805bb087e5a1f37a1900119258101c"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071cx6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071cx8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071cx9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071cxB.h"
+      ],
+      "header_enumerated_values": 889,
+      "sha256": "59de0f37f06a7a1b339e379d23292c55b51361a1187e6d26e65f1498d6067413"
     },
     {
       "name": "py32f071exx.svd",
       "device": "PY32F071Exx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F071Exx.svd",
-      "sha256": "1894138e696f0807aef009467f92cf837a9e9fa98d7a543e992437032489c1fc"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071ex6 .h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071ex8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071ex9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071exB.h"
+      ],
+      "header_enumerated_values": 889,
+      "sha256": "0bdaa3adf55def2f370af907591329adaf0d03bf7e8a0f94fb6623e04c0f8ec0"
     },
     {
       "name": "py32f071xx.svd",
       "device": "PY32F071xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F071xx.svd",
-      "sha256": "b17d1ab8392855b13eebd6bfdaf1bb29cca45ab7cd4d3d0c3c2e020f1651e471"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071x8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071x9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f071xB.h"
+      ],
+      "header_enumerated_values": 892,
+      "sha256": "6a51796e966a49a7b9e1903c21080ecd31d0888a33fee3a1e7bf81cb9f9a0305"
     },
     {
       "name": "py32f072cxx.svd",
       "device": "PY32F072Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F072Cxx.svd",
-      "sha256": "959d400ecd154460792b9d5146317a3c15efa68f40ccc472b09751f504138570"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072cx6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072cx8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072cx9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072cxB.h"
+      ],
+      "header_enumerated_values": 970,
+      "sha256": "89df7dde412a246606cbf970e6921cb9ee760dd06b8d3d6dd262a7cbc5926ad7"
     },
     {
       "name": "py32f072exx.svd",
       "device": "PY32F072Exx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F072Exx.svd",
-      "sha256": "9ed74557d1dd5afdf15834ea05fca0cd04308e2bef2f29bbb8d985809a493444"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072ex6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072ex8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072ex9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072exB.h"
+      ],
+      "header_enumerated_values": 973,
+      "sha256": "30799a6cc9dafb51cfbfa7c4c20d51b48c50bc41f2e8ca8bbdb9b346268b04f4"
     },
     {
       "name": "py32f072xx.svd",
       "device": "PY32F072xx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F072xx.svd",
-      "sha256": "6132125a54ac3b904fe6d0d4fac6fd87bdcfd21674435c03cc1840035307cb6d"
+      "headers": [
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072x6.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072x8.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072x9.h",
+        "Drivers/CMSIS/Device/PY32F0xx/Include/py32f072xB.h"
+      ],
+      "header_enumerated_values": 976,
+      "sha256": "37682f78b859c435d9f2d266c83614e3bc11028a7c942e3b93b5678bd84e1654"
     },
     {
       "name": "py32f403xx.svd",
       "device": "PY32F403xx",
       "pack": "PY32F4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F403xx.svd",
-      "sha256": "320490031064313980439a55d3413aecc2aa418a0e8a6a13c67e7aa8285f34b3"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32F4xx/Include/py32f403xB.h",
+        "Drivers/CMSIS/Device/PUYA/PY32F4xx/Include/py32f403xC.h",
+        "Drivers/CMSIS/Device/PUYA/PY32F4xx/Include/py32f403xD.h"
+      ],
+      "header_enumerated_values": 922,
+      "sha256": "4b4dbd14b2d949e0a9c7ec96807a81286097ed2d5b45f47f7efe7cc5fcf5f6aa"
     },
     {
       "name": "py32f410xx.svd",
       "device": "PY32F410xx",
       "pack": "PY32F4xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F410xx.svd",
-      "sha256": "ec4222b22e7437c01e73c095f9129739129ea90bb3f21a6156f2eadcd74cfa59"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32F4xx/Include/py32f410xB.h"
+      ],
+      "header_enumerated_values": 1180,
+      "sha256": "b298c4dcdc54d8a6cf379d6b35aca97d2e0c351e6cc51a057b33bd4241abd00e"
     },
     {
       "name": "py32l020xx.svd",
       "device": "PY32L020xx",
       "pack": "PY32L0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32L020xx.svd",
-      "sha256": "6d1f4b96eb6977248e03f50f748050d44369d915071eae600e38e5ad0bb4153a"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32L0xx/Include/py32l020x5.h"
+      ],
+      "header_enumerated_values": 272,
+      "sha256": "90151828585279ceb94a480ad6a5677bdd06f93eec238c9fa94829e25e1495f4"
     },
     {
       "name": "py32l090xx.svd",
       "device": "PY32L090xx",
       "pack": "PY32L0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32L090xx.svd",
-      "sha256": "a1b2c12543f1a49f64b47b4251ad5953cb824396a3de6231e70532ddddb93755"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32L0xx/Include/py32l090xB.h",
+        "Drivers/CMSIS/Device/PUYA/PY32L0xx/Include/py32l090xC.h"
+      ],
+      "header_enumerated_values": 1333,
+      "sha256": "35312a9150820c3f9cd7a103b26a4dc4a9f176a25f628836cf26b985e19d7b89"
     },
     {
       "name": "py32m010xx.svd",
       "device": "PY32M010xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M010xx.svd",
-      "sha256": "b6763af0a93a0ba6d8343320c9020aea2aeaa41c73063f53c14839eba8d43bf1"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m010x5.h"
+      ],
+      "header_enumerated_values": 272,
+      "sha256": "3fdfb708e291661bdaa586b9accb86f7f6b8b8e665ba0f1fa702da661be1e395"
     },
     {
       "name": "py32m020xx.svd",
       "device": "PY32M020xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M020xx.svd",
-      "sha256": "bfbba7970708eab00d565394773ee0e5181c44ff0174c9b7e85f0d105174808e"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m020x6.h"
+      ],
+      "header_enumerated_values": 733,
+      "sha256": "0745a1eb84baf8f0f3d3d28e687fd28bb0f4a73d309bddd530e7976de58aa60b"
     },
     {
       "name": "py32m030xx.svd",
       "device": "PY32M030xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M030xx.svd",
-      "sha256": "9a9d56c64e05c1d7c7ce6f105f98f6cd2a57e0582b28b40045360bdb808b5689"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m030x8.h"
+      ],
+      "header_enumerated_values": 733,
+      "sha256": "a8d72525acd7c5f0862946887b243a30f5aa6c77a2cf989844149617b6156eab"
     },
     {
       "name": "py32m031xx.svd",
       "device": "PY32M031xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M031xx.svd",
-      "sha256": "3226c5d1c75d394b3b4e88516f7c126b9d1b9437be7235699c838cfc29883dd3"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m031x8.h"
+      ],
+      "header_enumerated_values": 747,
+      "sha256": "a000803401a9b7753fa4281da94f8effd9acf25582522a439468defea8de550f"
     },
     {
       "name": "py32m070cxx.svd",
       "device": "PY32M070Cxx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M070Cxx.svd",
-      "sha256": "c048b143e245a41bbbee7d5fa378ea7c71645fa91d2453fb5e8ebc818ceff70d"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m070cx6.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070cx8.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070cx9.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070cxB.h"
+      ],
+      "header_enumerated_values": 887,
+      "sha256": "8d68ba7fbffbf3288979c391d78bb7bc2df033942ff4c64ba8f6cf41979eeb88"
     },
     {
       "name": "py32m070xx.svd",
       "device": "PY32M070xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32M070xx.svd",
-      "sha256": "fe8020f834eefb9a2a4a8469eff6ca4eae5986b35b0d42f7222a720613b2d40e"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32m070x6.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070x8.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070x9.h",
+        "Files/Drivers/CMSIS/Device/Include/py32m070xB.h"
+      ],
+      "header_enumerated_values": 887,
+      "sha256": "68f10cdb556d4e83fa14602dd9fb19060ed804ddc642d7ce5bea8049739be498"
     },
     {
       "name": "py32md310xx.svd",
       "device": "PY32MD310xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD310xx.svd",
-      "sha256": "dcc13a812d254a3518fb460503402787162fa1007a17ed2a34746de2c2033b5d"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32md310x8.h"
+      ],
+      "header_enumerated_values": 733,
+      "sha256": "2e72c78667f397a09210d08f0bdb5524aeafacc95e066a99bad862210e2f6c35"
     },
     {
       "name": "py32md320xx.svd",
       "device": "PY32MD320xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD320xx.svd",
-      "sha256": "07355bf64f671dfd198120aebf5c3eeb28bb29e1db064cd88e1225f6b4ba242d"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32md320x8.h"
+      ],
+      "header_enumerated_values": 733,
+      "sha256": "065799ef856c7332a6558ad426c650a6c1149f2ac8d0805c6b6f57e27a284787"
     },
     {
       "name": "py32md410xx.svd",
       "device": "PY32MD410xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD410xx.svd",
-      "sha256": "cd9eb91168ac4f31d78c9a0a350d5c0e354f1eeeec649b1dcd44656799e1cf5e"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32md410x8.h"
+      ],
+      "header_enumerated_values": 747,
+      "sha256": "d504dd7392c8c294f634674cfccfdaf0b846184d1300ff5de438acf8262a8d1c"
     },
     {
       "name": "py32md420xx.svd",
       "device": "PY32MD420xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD420xx.svd",
-      "sha256": "9a0657ae8bc6f2550ce0da9d65a9082d19fd36d495a7bf1e126cc670af81ed4c"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32md420x8.h"
+      ],
+      "header_enumerated_values": 747,
+      "sha256": "1672c924ff029b9f39fc68227dd57fdc110974555ea36ef37291955edfa2d34e"
     },
     {
       "name": "py32md430xx.svd",
       "device": "PY32MD430xx",
       "pack": "PY32Mxxx_DFP",
       "archive_path": "Files/CMSIS/SVD/PY32MD430xx.svd",
-      "sha256": "ddeed49d2babe4957042f632069cb3f8b50f4a38dcda3511898af9c6f230b5e8"
+      "headers": [
+        "Files/Drivers/CMSIS/Device/Include/py32md430x8.h"
+      ],
+      "header_enumerated_values": 747,
+      "sha256": "8274d8fc22601e67343f672b22f36ae9b59d7280a41c733cc58b23ee5785687c"
     },
     {
       "name": "py32t020xx.svd",
       "device": "PY32T020xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T020xx.svd",
-      "sha256": "bfe1e48561b9c6cb45069e8c96ab31fa2cdcd1c8aab0f631be7cad7f663cf455"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020bx5.h",
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020bx6.h",
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020x5.h",
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020x6.h"
+      ],
+      "header_enumerated_values": 742,
+      "sha256": "c3ce3c200b0fc2a325fc5031bda1b077b38c5e26d7e800b0fc84f75d0664a386"
     },
     {
       "name": "py32t090xx.svd",
       "device": "PY32T090xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T090xx.svd",
-      "sha256": "23b3928c77bcc8d8def40befc7c7a317a5ef874c104c869f953ea5904a947b34"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t090xB.h",
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t090xC.h"
+      ],
+      "header_enumerated_values": 1369,
+      "sha256": "fc441907e3564145a1b5d5dbf6f3dae499261bc76d735cb0c39e464070e29560"
     },
     {
       "name": "py32t092xx.svd",
       "device": "PY32T092xx",
       "pack": "PY32T0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32T092xx.svd",
-      "sha256": "5937dbbc22035308eb963281a661289ffc959b238cfa315daa4266776cee9216"
+      "headers": [
+        "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t092xC.h"
+      ],
+      "header_enumerated_values": 1540,
+      "sha256": "aece95e267ee443215a6139e1b8001a02e99a69ffe671f615522aa25e9d2f6d0"
     }
   ]
 }
