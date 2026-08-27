@@ -10426,12 +10426,9 @@
               <bitRange>[1:0]</bitRange>
               <enumeratedValues>
                 <enumeratedValue>
-                  <name>0</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>1</name>
-                  <value>2</value>
+                  <name>Char8Bits</name>
+                  <description>8 data bits per character</description>
+                  <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
             </field>

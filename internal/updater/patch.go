@@ -43,7 +43,11 @@ func patchSVD(data []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	return addHSIFrequencyValues(data)
+	data, err = addHSIFrequencyValues(data)
+	if err != nil {
+		return nil, err
+	}
+	return addUARTCharacterLengthValues(data)
 }
 
 // addHSIFrequencyValues names the 24 MHz HSI_FS encoding documented by the
@@ -98,6 +102,41 @@ func addHSIFrequencyValues(data []byte) ([]byte, error) {
 		result = updated
 	}
 	return result, nil
+}
+
+// addUARTCharacterLengthValues names the T020 UART CR1.M encoding documented
+// by the reference manual. Header macros M_0 and M_1 are bit components, not
+// character-length choices.
+func addUARTCharacterLengthValues(data []byte) ([]byte, error) {
+	var device struct {
+		Name string `xml:"name"`
+	}
+	if err := xml.Unmarshal(data, &device); err != nil || !strings.EqualFold(strings.TrimSpace(device.Name), "PY32T020xx") {
+		return data, nil
+	}
+	fields, err := scanSVDFields(data)
+	if err != nil {
+		return data, nil
+	}
+	for _, field := range fields {
+		if field.HasEnumerations || field.RegisterName != "CR1" || field.FieldName != "M" || field.BitWidth != 2 {
+			continue
+		}
+		if field.PeripheralName != "UART1" && field.PeripheralGroup != "UART" {
+			continue
+		}
+		value := renderSVDEnumerations(field, []svdEnumeration{{
+			Name:        "Char8Bits",
+			Description: "8 data bits per character",
+			Value:       3,
+		}})
+		result := make([]byte, 0, len(data)+len(value))
+		result = append(result, data[:field.InsertOffset]...)
+		result = append(result, value...)
+		result = append(result, data[field.InsertOffset:]...)
+		return result, nil
+	}
+	return data, nil
 }
 
 // normalizeGPIOGroupNames gives structurally identical GPIO ports the common

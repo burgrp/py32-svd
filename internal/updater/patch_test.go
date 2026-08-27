@@ -153,6 +153,42 @@ func TestAddHSIFrequencyValuesLeavesOtherLayoutsUnchanged(t *testing.T) {
 	}
 }
 
+func TestAddUARTCharacterLengthValues(t *testing.T) {
+	input := `<device><name>PY32T020xx</name><peripherals><peripheral><name>UART1</name><groupName>UART</groupName><registers><register><name>CR1</name><fields><field><name>M</name><bitRange>[1:0]</bitRange></field></fields></register></registers></peripheral></peripherals></device>`
+	header := strings.Join([]string{
+		`#define UART_CR1_M_Pos 0U`,
+		`#define UART_CR1_M_Msk 3U`,
+		`#define UART_CR1_M_0 1U`,
+		`#define UART_CR1_M_1 2U`,
+	}, "\n")
+
+	patched, err := addUARTCharacterLengthValues([]byte(input))
+	if err != nil {
+		t.Fatal(err)
+	}
+	got, count, err := enrichSVDFromHeaders(patched, []headerSource{{Path: "device.h", Data: []byte(header)}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if count != 0 {
+		t.Fatalf("header enrichment added %d UART M bit components, want 0", count)
+	}
+	if !bytes.Contains(got, []byte(`<name>Char8Bits</name><description>8 data bits per character</description><value>3</value>`)) {
+		t.Fatalf("semantic UART character length was not added: %s", got)
+	}
+	if bytes.Contains(got, []byte(`<name>1</name>`)) {
+		t.Fatalf("UART M bit component was published as an enumeration: %s", got)
+	}
+
+	again, err := addUARTCharacterLengthValues(got)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(got, again) {
+		t.Fatal("UART character-length patch is not idempotent")
+	}
+}
+
 func TestExtractPublishesAndHashesPatchedSVD(t *testing.T) {
 	input := `<device><name>PY32TEST</name><peripherals>` +
 		`<peripheral><name>GPIOA</name><registers><register><name>MODER</name><addressOffset>0</addressOffset><fields><field><name>MODE0</name><bitRange>[1:0]</bitRange></field></fields></register></registers></peripheral>` +

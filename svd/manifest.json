@@ -506,8 +506,8 @@
         "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020x5.h",
         "Drivers/CMSIS/Device/PUYA/PY32T0xx/Include/py32t020x6.h"
       ],
-      "header_enumerated_values": 739,
-      "sha256": "1f4dd2a1c08cb9f0815f30905decbc6b04ecbe639cb75c97650bdb86e224486d"
+      "header_enumerated_values": 737,
+      "sha256": "da06e5b0deb20b5547b82319cc37c5d0555f54fef29c04e3496c68d698a3153b"
     },
     {
       "name": "py32t090xx.svd",

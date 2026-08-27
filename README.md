@@ -41,6 +41,9 @@ common layout and 3 for PY32F032. Adding this semantic value before header
 enrichment prevents CMSIS bit-component macros such as `HSI_FS_2` from being
 published as if they were field choices.
 
+PY32T020's `UART.CR1.M` field similarly receives a `Char8Bits` value with
+encoding 3, as specified in section 20.3.4 of the PY32T020-B reference manual.
+
 ### Header-derived field values
 
 Puya's SVD files describe register fields but generally omit their
