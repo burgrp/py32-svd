@@ -96,6 +96,63 @@ func TestNormalizeGPIOGroupNamesLeavesUnrelatedSVDUnchanged(t *testing.T) {
 	}
 }
 
+func TestAddHSIFrequencyValues(t *testing.T) {
+	input := `<device><name>PY32TEST</name><peripherals><peripheral><name>RCC</name><registers><register><name>ICSCR</name><fields><field><name>HSI_FS</name><bitRange>[15:13]</bitRange></field></fields></register></registers></peripheral></peripherals></device>`
+	header := strings.Join([]string{
+		`#define RCC_ICSCR_HSI_FS_Pos 13U`,
+		`#define RCC_ICSCR_HSI_FS_Msk (7U << RCC_ICSCR_HSI_FS_Pos)`,
+		`#define RCC_ICSCR_HSI_FS_0 (1U << RCC_ICSCR_HSI_FS_Pos)`,
+		`#define RCC_ICSCR_HSI_FS_1 (2U << RCC_ICSCR_HSI_FS_Pos)`,
+		`#define RCC_ICSCR_HSI_FS_2 (4U << RCC_ICSCR_HSI_FS_Pos)`,
+	}, "\n")
+
+	patched, err := addHSIFrequencyValues([]byte(input))
+	if err != nil {
+		t.Fatal(err)
+	}
+	got, count, err := enrichSVDFromHeaders(patched, []headerSource{{Path: "device.h", Data: []byte(header)}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if count != 0 {
+		t.Fatalf("header enrichment added %d HSI_FS bit components, want 0", count)
+	}
+	if !bytes.Contains(got, []byte(`<name>Freq24MHz</name><description>24 MHz HSI clock</description><value>4</value>`)) {
+		t.Fatalf("semantic HSI_FS value was not added: %s", got)
+	}
+	if bytes.Contains(got, []byte(`<name>2</name>`)) {
+		t.Fatalf("HSI_FS bit component was published as an enumeration: %s", got)
+	}
+
+	again, err := addHSIFrequencyValues(got)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(got, again) {
+		t.Fatal("HSI frequency patch is not idempotent")
+	}
+
+	f032 := strings.Replace(input, "PY32TEST", "PY32F032xx", 1)
+	got, err = addHSIFrequencyValues([]byte(f032))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Contains(got, []byte(`<name>Freq24MHz</name><description>24 MHz HSI clock</description><value>3</value>`)) {
+		t.Fatalf("F032 semantic HSI_FS value was not added with encoding 3: %s", got)
+	}
+}
+
+func TestAddHSIFrequencyValuesLeavesOtherLayoutsUnchanged(t *testing.T) {
+	input := []byte(`<device><name>PY32TEST</name><peripherals><peripheral><name>RCC</name><registers><register><name>ICSCR</name><fields><field><name>HSI_FS</name><bitRange>[17:16]</bitRange></field></fields></register></registers></peripheral></peripherals></device>`)
+	got, err := addHSIFrequencyValues(input)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(got, input) {
+		t.Fatalf("non-three-bit HSI_FS field changed: %s", got)
+	}
+}
+
 func TestExtractPublishesAndHashesPatchedSVD(t *testing.T) {
 	input := `<device><name>PY32TEST</name><peripherals>` +
 		`<peripheral><name>GPIOA</name><registers><register><name>MODER</name><addressOffset>0</addressOffset><fields><field><name>MODE0</name><bitRange>[1:0]</bitRange></field></fields></register></registers></peripheral>` +

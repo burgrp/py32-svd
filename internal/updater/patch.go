@@ -5,6 +5,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -38,7 +39,65 @@ type registerLayoutEntry struct {
 // patchSVD applies deterministic corrections to an upstream Puya SVD while
 // preserving its formatting and line endings.
 func patchSVD(data []byte) ([]byte, error) {
-	return normalizeGPIOGroupNames(data)
+	data, err := normalizeGPIOGroupNames(data)
+	if err != nil {
+		return nil, err
+	}
+	return addHSIFrequencyValues(data)
+}
+
+// addHSIFrequencyValues names the 24 MHz HSI_FS encoding documented by the
+// reference manuals. This also prevents CMSIS bit-component macros such as
+// HSI_FS_2 from being mistaken for semantic field values during enrichment.
+func addHSIFrequencyValues(data []byte) ([]byte, error) {
+	fields, err := scanSVDFields(data)
+	if err != nil {
+		return data, nil
+	}
+	var device struct {
+		Name string `xml:"name"`
+	}
+	if err := xml.Unmarshal(data, &device); err != nil {
+		return data, nil
+	}
+	hsi24MHzEncoding := uint64(4)
+	if strings.EqualFold(strings.TrimSpace(device.Name), "PY32F032xx") {
+		hsi24MHzEncoding = 3
+	}
+
+	var insertions []svdInsertion
+	for _, field := range fields {
+		if field.HasEnumerations || field.RegisterName != "ICSCR" || field.FieldName != "HSI_FS" || field.BitWidth != 3 {
+			continue
+		}
+		if field.PeripheralName != "RCC" && field.PeripheralGroup != "RCC" {
+			continue
+		}
+		insertions = append(insertions, svdInsertion{
+			offset: field.InsertOffset,
+			data: renderSVDEnumerations(field, []svdEnumeration{{
+				Name:        "Freq24MHz",
+				Description: "24 MHz HSI clock",
+				Value:       hsi24MHzEncoding,
+			}}),
+		})
+	}
+	if len(insertions) == 0 {
+		return data, nil
+	}
+
+	sort.Slice(insertions, func(i, j int) bool {
+		return insertions[i].offset > insertions[j].offset
+	})
+	result := append([]byte(nil), data...)
+	for _, insertion := range insertions {
+		updated := make([]byte, 0, len(result)+len(insertion.data))
+		updated = append(updated, result[:insertion.offset]...)
+		updated = append(updated, insertion.data...)
+		updated = append(updated, result[insertion.offset:]...)
+		result = updated
+	}
+	return result, nil
 }
 
 // normalizeGPIOGroupNames gives structurally identical GPIO ports the common

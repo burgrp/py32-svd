@@ -3090,6 +3090,13 @@
               <name>HSI_FS</name>
               <description>HSI frequency selection</description>
               <bitRange>[15:13]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>Freq24MHz</name>
+                  <description>24 MHz HSI clock</description>
+                  <value>4</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>LSI_TRIM</name>

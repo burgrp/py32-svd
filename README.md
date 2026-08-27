@@ -35,6 +35,12 @@ layouts are compatible. A port may omit registers present in the richest port,
 but conflicting offsets or register shapes abort the update. The manifest
 hashes describe these patched, published bytes rather than the raw ZIP entries.
 
+The three-bit `RCC.ICSCR.HSI_FS` field receives a `Freq24MHz` value using the
+family-specific encoding specified by the PY32 reference manuals: 4 for the
+common layout and 3 for PY32F032. Adding this semantic value before header
+enrichment prevents CMSIS bit-component macros such as `HSI_FS_2` from being
+published as if they were field choices.
+
 ### Header-derived field values
 
 Puya's SVD files describe register fields but generally omit their
@@ -61,7 +67,7 @@ The extraction is deliberately conservative:
 	SVD field's bit offset and mask;
 - `_Pos` and `_Msk` helpers are ignored, while numbered components such as
 	`_0` and `_1` are retained because they are useful CMSIS-compatible Go
-	constants;
+	constants, except where a deterministic correction supplies semantic values;
 - register-positioned C values must fit wholly inside the matched SVD field and
 	are shifted to field-local SVD values;
 - conflicting definitions within one header or between device variants are

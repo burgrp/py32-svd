@@ -3743,15 +3743,8 @@
               <bitRange>[15:13]</bitRange>
               <enumeratedValues>
                 <enumeratedValue>
-                  <name>0</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>1</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>2</name>
+                  <name>Freq24MHz</name>
+                  <description>24 MHz HSI clock</description>
                   <value>4</value>
                 </enumeratedValue>
               </enumeratedValues>
