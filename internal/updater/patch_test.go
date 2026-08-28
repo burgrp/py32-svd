@@ -153,6 +153,42 @@ func TestAddHSIFrequencyValuesLeavesOtherLayoutsUnchanged(t *testing.T) {
 	}
 }
 
+func TestCorrectHSIFSFieldWidths(t *testing.T) {
+	for _, test := range []struct {
+		device   string
+		bitRange string
+	}{
+		{device: "PY32F001Cxx", bitRange: "[16:16]"},
+		{device: "PY32F002Cxx", bitRange: "[17:16]"},
+	} {
+		t.Run(test.device, func(t *testing.T) {
+			input := `<device><name>` + test.device + `</name><peripherals><peripheral><name>RCC</name><registers><register><name>ICSCR</name><fields>` +
+				`<field><name>HSI_FS</name><bitRange>` + test.bitRange + `</bitRange></field>` +
+				`<field><name>LSI_TRIM</name><bitRange>[27:19]</bitRange></field>` +
+				`</fields></register></registers></peripheral></peripherals></device>`
+
+			got, err := patchSVD([]byte(input))
+			if err != nil {
+				t.Fatal(err)
+			}
+			if !bytes.Contains(got, []byte(`<bitRange>[18:16]</bitRange>`)) {
+				t.Fatalf("HSI_FS field width was not corrected: %s", got)
+			}
+			if !bytes.Contains(got, []byte(`<name>Freq24MHz</name><description>24 MHz HSI clock</description><value>4</value>`)) {
+				t.Fatalf("semantic HSI_FS value was not added: %s", got)
+			}
+
+			again, err := patchSVD(got)
+			if err != nil {
+				t.Fatal(err)
+			}
+			if !bytes.Equal(got, again) {
+				t.Fatal("HSI_FS field-width correction is not idempotent")
+			}
+		})
+	}
+}
+
 func TestAddUARTCharacterLengthValues(t *testing.T) {
 	input := `<device><name>PY32T020xx</name><peripherals><peripheral><name>UART1</name><groupName>UART</groupName><registers><register><name>CR1</name><fields><field><name>M</name><bitRange>[1:0]</bitRange></field></fields></register></registers></peripheral></peripherals></device>`
 	header := strings.Join([]string{

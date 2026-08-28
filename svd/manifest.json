@@ -50,7 +50,7 @@
       "device": "PY32F001Cxx",
       "pack": "PY32F0xx_DFP",
       "archive_path": "CMSIS/SVD/PY32F001Cxx.svd",
-      "sha256": "0532ff5433375a1da973217599ff5b365e3b6e578cd2106c9e65d1c1c9d80bc6"
+      "sha256": "2ca1502c44ff838e57a83158ba4e63ad0117633d430c3337dd2fc864501a98ea"
     },
     {
       "name": "py32f001xx.svd",
@@ -90,7 +90,7 @@
         "Drivers/CMSIS/Device/PY32F0xx/Include/py32f002cx6.h"
       ],
       "header_enumerated_values": 283,
-      "sha256": "48bf733120b12d6aad2b0d82ca357ff443856779955e7eeee869037dc7478ce5"
+      "sha256": "396009a8e220cdc47903157a68dd3015cac3cf202058e22104816b5a5531500a"
     },
     {
       "name": "py32f002xxx.svd",

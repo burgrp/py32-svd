@@ -18,6 +18,8 @@ type svdFieldLocation struct {
 	FieldName       string
 	BitOffset       uint
 	BitWidth        uint
+	ContentStart    int
+	ElementEnd      int
 	InsertOffset    int
 	ChildIndent     string
 	Newline         string
@@ -338,6 +340,8 @@ func finishSVDField(data []byte, field *svdFieldContext, elementEnd int) (svdFie
 		FieldName:       field.name,
 		BitOffset:       bitOffset,
 		BitWidth:        bitWidth,
+		ContentStart:    field.contentStart,
+		ElementEnd:      elementEnd,
 		InsertOffset:    insertOffset,
 		ChildIndent:     childIndent,
 		Newline:         newline,

@@ -43,11 +43,86 @@ func patchSVD(data []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	data, err = correctHSIFSFieldWidths(data)
+	if err != nil {
+		return nil, err
+	}
 	data, err = addHSIFrequencyValues(data)
 	if err != nil {
 		return nil, err
 	}
 	return addUARTCharacterLengthValues(data)
+}
+
+// correctHSIFSFieldWidths repairs two vendor SVDs whose HSI_FS fields omit
+// bit 18 even though the vendor clock table uses three-bit encodings.
+func correctHSIFSFieldWidths(data []byte) ([]byte, error) {
+	var device struct {
+		Name string `xml:"name"`
+	}
+	if err := xml.Unmarshal(data, &device); err != nil {
+		return data, nil
+	}
+
+	var expectedWidth uint
+	switch strings.ToUpper(strings.TrimSpace(device.Name)) {
+	case "PY32F001CXX":
+		expectedWidth = 1
+	case "PY32F002CXX":
+		expectedWidth = 2
+	default:
+		return data, nil
+	}
+
+	fields, err := scanSVDFields(data)
+	if err != nil {
+		return data, nil
+	}
+	var hsiField, lsiField *svdFieldLocation
+	for i := range fields {
+		field := &fields[i]
+		if field.RegisterName != "ICSCR" || (field.PeripheralName != "RCC" && field.PeripheralGroup != "RCC") {
+			continue
+		}
+		switch field.FieldName {
+		case "HSI_FS":
+			if hsiField != nil {
+				return nil, fmt.Errorf("%s has multiple RCC.ICSCR.HSI_FS fields", device.Name)
+			}
+			hsiField = field
+		case "LSI_TRIM":
+			if lsiField != nil {
+				return nil, fmt.Errorf("%s has multiple RCC.ICSCR.LSI_TRIM fields", device.Name)
+			}
+			lsiField = field
+		}
+	}
+	if hsiField == nil || hsiField.BitOffset != 16 {
+		return nil, fmt.Errorf("%s has unexpected RCC.ICSCR.HSI_FS layout", device.Name)
+	}
+	if lsiField == nil || lsiField.BitOffset != 19 {
+		return nil, fmt.Errorf("%s has unexpected RCC.ICSCR.LSI_TRIM layout", device.Name)
+	}
+	if hsiField.BitWidth == 3 {
+		return data, nil
+	}
+	if hsiField.BitWidth != expectedWidth {
+		return nil, fmt.Errorf("%s RCC.ICSCR.HSI_FS width is %d, want %d or 3", device.Name, hsiField.BitWidth, expectedWidth)
+	}
+
+	oldRange := []byte(fmt.Sprintf("<bitRange>[%d:16]</bitRange>", 15+expectedWidth))
+	newRange := []byte("<bitRange>[18:16]</bitRange>")
+	fieldData := data[hsiField.ContentStart:hsiField.ElementEnd]
+	if bytes.Count(fieldData, oldRange) != 1 {
+		return nil, fmt.Errorf("%s RCC.ICSCR.HSI_FS does not use expected bitRange", device.Name)
+	}
+	relativeOffset := bytes.Index(fieldData, oldRange)
+	offset := hsiField.ContentStart + relativeOffset
+	result := make([]byte, 0, len(data)-len(oldRange)+len(newRange))
+	result = append(result, data[:offset]...)
+	result = append(result, newRange...)
+	result = append(result, data[offset+len(oldRange):]...)
+	return result, nil
 }
 
 // addHSIFrequencyValues names the 24 MHz HSI_FS encoding documented by the

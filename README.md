@@ -41,6 +41,11 @@ common layout and 3 for PY32F032. Adding this semantic value before header
 enrichment prevents CMSIS bit-component macros such as `HSI_FS_2` from being
 published as if they were field choices.
 
+The PY32F001C and PY32F002C SVDs under-declare `HSI_FS` as one and two bits,
+respectively. Their shifted register layout reserves bits 16 through 18 before
+`LSI_TRIM`, and the vendor F002C clock table uses all three bits. The updater
+corrects both fields to `[18:16]` before adding the semantic value.
+
 PY32T020's `UART.CR1.M` field similarly receives a `Char8Bits` value with
 encoding 3, as specified in section 20.3.4 of the PY32T020-B reference manual.
 
